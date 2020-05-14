@@ -1,0 +1,23 @@
+<van-cell title="版本号" value="v1.0.0" />
+<van-cell title="邮箱" value="1192620781@qq.com" />
+<van-cell title="服务条款" is-link />
+<van-cell title="隐私条款" is-link />
+<van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item name="1">
+    <view slot="title">关于我们
+      <van-icon name="question-o" />
+    </view>
+    <view>产品定位</view>
+    <text decode="{{true}}">&emsp;&ensp;书享书是一款基于高校圈子的专业二手书交易平台，致力于为用户提供高效便捷的二手书交易模式。</text>
+    <view>目标用户</view>
+    <text decode="{{true}}">&emsp;&ensp;在校大学生，热爱读书和分享的文艺青年</text>
+    <view>使用场景</view>
+    <text decode="{{true}}">&emsp;&ensp;在寝室的床上躺着，边看App,边吐槽学校书本太贵</text>
+    <view>预期目标</view>
+    <text decode="{{true}}">&emsp;&ensp;书本便宜，上门取件，一键买卖书籍。</text>
+    <view>使用时间</view>
+    <text decode="{{true}}">&emsp;&ensp;一般在学期开始时需要较多</text>
+    <view>如何使用</view>
+    <text decode="{{true}}">&emsp;&ensp;快捷购买本学期所需要的书籍</text>
+  </van-collapse-item>
+</van-collapse>

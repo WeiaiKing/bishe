@@ -1,0 +1,110 @@
+<view id="sell">
+<van-notice-bar mode="closeable" backgroundColor="#fef9e5" color="#111" text="可以点击右侧的按钮进行书籍发布后就可以自行进行卖籍交易啦！以书会友！诚信卖书！" />
+  <view id="scan-content" wx:if="{{result !=''}}">
+    <view id="scan">
+      <view class="scan" bindtap='getScancode'>
+        <image src="/images/barcode-scan.png" style="width:60rpx;height:60rpx"></image>
+        <view style="color:#fff;margin-left:20rpx;">扫码卖书</view>
+      </view>
+      <view class="sell_book">
+        <view style="margin-left:30rpx;">
+          <view style="display:flex;margin-bottom: 10rpx;">
+            <view>
+              <text>1 </text>
+              <text style="color:#aaaaa9;"> 本</text>
+            </view>
+            <view>
+              <text style="color:#aaaaa9;margin-left:10rpx;">最高可卖</text>
+              <text style="">￥{{scan_list[0].price}}</text>
+            </view>
+          </view>
+          <view style="display:flex;color:#aaaaa9;font-size:28rpx;" bindtap="goPhace">
+            <view style="margin-right:8rpx;">预估价格区间￥7.90~￥9.90 </view>
+            <van-icon name="info-o" color="#aaaaa9" size="14" />
+          </view>
+        </view>
+        <view class="next" bindtap="gobuy">下一步</view>
+      </view>
+    </view>
+    <view class="scan_book_list" wx:for="{{scan_list}}" wx:key="index">
+      <image src="{{item.images.small}}" style="width:180rpx;height:230rpx;"></image>
+      <view class="scan_book_list_item">
+        <view>
+          <view class="error_flex">
+            <view style="font-size:28rpx">{{item.title}}{{item.subtitle}}</view>
+            <image src="/images/error.png" style="width:28rpx;height:28rpx;"></image>
+          </view>
+          <view style="color:#9c9c9c;font-size:24rpx;margin:10rpx 0;">{{item.author}}</view>
+          <view>
+            <text style="color:#9c9c9c;font-size:26rpx;">品相好可买：</text>
+            <text style="color:#ff4d94">￥{{item.price}}</text>
+          </view>
+        </view>
+        <text style="text-decoration:line-through;font-size:24rpx;color:#9c9c9c;">原价：￥{{item.price}}</text>
+      </view>
+    </view>
+    <van-cell is-link title="了解更多卖书规则" link-type="navigateTo" url="../sell-rule/sell-rule" size="large" />
+    <view style="height:250rpx;"></view>
+  </view>
+  <view id="sell-step" wx:else>
+    <view id="step">
+      <view class="step">
+        <image src="/images/scan.png" style="width:200rpx;height:200rpx;"></image>
+        <view>
+          <view>手机扫码</view>
+          <view>看收购价</view>
+          <view>
+            <view bindtap="open" class="open" data-id="{{open}}">什么书不收</view>
+            <van-icon name="arrow-down" color="#ffd6d2" size="26rpx" wx:if="{{open==1}}" />
+            <van-icon name="arrow-up" color="#ffd6d2" size="26rpx" wx:else/>
+          </view>
+        </view>
+      </view>
+      <block wx:if="{{open==0}}">
+        <view style="padding:30rpx 30rpx 0 30rpx">
+          <view>扫码提示不收或在安排快递前线上审核显示拒绝的就是暂时不收的。</view>
+          <view>不收有影响阅读的破损、污渍、老化、异味的书。</view>
+          <view>不收盗版、非卖品、非法出版物</view>
+        </view>
+      </block>
+      <view class="step">
+        <image src="/images/express.png" style="width:200rpx;height:200rpx;"></image>
+        <view>
+          <view>快递免费</view>
+          <view>上门取书</view>
+        </view>
+      </view>
+      <view class="step">
+        <image src="/images/money.png" style="width:200rpx;height:200rpx;"></image>
+        <view>
+          <view>审核通过</view>
+          <view>书款到账</view>
+          <view>
+            <view bindtap="open_icon" class="open" data-id="{{open_icon}}">什么是审核</view>
+            <!-- <text bindtap="open" class="open" data-index="1">什么是审核</text> -->
+            <van-icon name="arrow-down" color="	#ff8780" size="26rpx" wx:if="{{open_icon==1}}" />
+            <van-icon name="arrow-up" color="	#ff8780" size="26rpx" wx:else/>
+          </view>
+        </view>
+      </view>
+      <block wx:if="{{open_icon==0}}">
+        <view style="padding:30rpx 30rpx 0 30rpx;">
+          <view>书享书在收到书时会进行品相审核，这一步会把书籍的品相分为全新、品相良好、品相中等、品相不合格，其中品相中等的收购价比全新和品相良好的要低 20%，品相不合格的书会被拒收。</view>
+          <view>卖家可以自付运费取回被拒的书（首次取回免费）。</view>
+        </view>
+      </block>
+      <van-cell is-link title="了解更多卖书规则" link-type="navigateTo" url="../sell-rule/sell-rule" size="large" />
+      <view class="scan1" bindtap='getScancode'>
+        <image src="/images/barcode-scan.png" style="width:60rpx;height:60rpx"></image>
+        <view style="color:#fff;margin-left:20rpx;">扫码卖书</view>
+      </view>
+    </view>
+    <view style="height:170rpx;"></view>
+
+  </view>
+  <!-- 发布卖书 -->
+  <view id="public" bindtap="goPublic" wx:if="{{public}}">
+    <image src="/images/Add.png" style="width:60rpx;height:60rpx;"></image>
+  </view>
+
+</view>

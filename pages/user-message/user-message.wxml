@@ -1,0 +1,28 @@
+<view id="user_message">
+  <view class="time">
+    2020年02月03日 10:44
+  </view>
+  <view class="sell_book">
+    <view>
+      <text style="">你有一张无门槛包邮卷</text>
+      <text style="color:#aaaaa9;margin-left:10rpx;">2020.4.5</text>
+      <text>就要过期了，现在就去下单吧。</text>
+    </view>
+  
+      <view class="next" bindtap="goIndex">去买书</view>
+  
+  </view>
+  <view class="time">
+    2020年02月01日 10:44
+  </view>
+  <view class="sell_book">
+    <view>
+      <text style="">你有一张无门槛包邮卷</text>
+      <text style="color:#aaaaa9;margin-left:10rpx;">2020.4.5</text>
+      <text>就要过期了，现在就去下单吧。</text>
+    </view>
+    
+      <view class="next" bindtap="goIndex">去买书</view>
+ 
+  </view>
+</view>

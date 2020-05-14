@@ -1,0 +1,24 @@
+<view class="container_search">
+  <view class="search">
+    <image src="/images/search.png" class="search_img"></image>
+    <input class="search_inp" confirm-type='search' value="{{value}}" placeholder="搜索湾大书享书" placeholder-class="inp_text" bindinput="bindInput" bindfocus='bindfocus' bindconfirm="search" auto-focus></input>
+    <image src="/images/error_search.png" style="width:60rpx;height:60rpx;z-index:999" bindtap="closeSearch" wx:if="{{value}}"></image>
+  </view>
+</view>
+ <view >
+    <view style="width:100%;height:15rpx;background:#f1f1f1;"></view>
+    <view id="header">
+      <view style="margin-bottom:30rpx;color:#969696">热门搜索</view>
+      <van-tag bindtap="search">互联网</van-tag>
+      <van-tag bindtap="search" style="margin: 0 20rpx;">经济学</van-tag>
+      <van-tag bindtap="search" >管理</van-tag>
+    </view>
+    <view style="width:100%;height:15rpx;background:#f1f1f1;"></view>
+    <view id="body">
+      <view style="display:flex; margin-bottom:30rpx;justify-content: space-between;">
+        <view style="color:#969696">历史记录</view>
+        <view>清空</view>
+      </view>
+      <van-tag>经济学</van-tag>
+    </view>
+  </view>

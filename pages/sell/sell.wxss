@@ -1,0 +1,110 @@
+.error_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scan_book_list {
+  margin: 30rpx;
+  display: flex;
+}
+
+.scan_book_list_item {
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+
+#sell-step {
+  margin-top: 80rpx;
+}
+
+.step image {
+  width: 280rpx;
+  height: 300rpx;
+}
+
+.step {
+  font-size: 40rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.open {
+  display: inline-block;
+  color: #ff8780;
+  font-size: 30rpx;
+}
+
+#scan {
+  
+}
+
+.scan {
+  position: fixed;
+  z-index: 99;
+  bottom: 150rpx;
+  background: #ff8780;
+  width: 300rpx;
+  height: 75rpx;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0rpx 5px 0px #4c4c4c;
+  margin-left: -150rpx;
+  left: 50%;
+}
+.scan1 {
+  position: fixed;
+  z-index: 99;
+  bottom: 80rpx;
+  background: #ff8780;
+  width: 300rpx;
+  height: 75rpx;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0rpx 5px 0px #4c4c4c;
+  margin-left: -150rpx;
+  left: 50%;
+}
+.sell_book {
+  position: fixed;
+  bottom: 0rpx;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f8;
+  width: 750rpx;
+  box-sizing: border-box;
+  height: 130rpx;
+}
+.next{
+  margin-right:30rpx;
+  background: #ff8780;
+  text-align: center;
+  line-height: 70rpx;
+  width: 170rpx;
+  height: 70rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+#public{
+  position: fixed;
+  bottom: 200rpx;
+  right: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6c6c6c;
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 50%;
+}

@@ -1,0 +1,46 @@
+page {
+  background: #f8f8f8;
+}
+
+.user {
+  background-image: url('https://hellorfimg.zcool.cn/provider_image/preview260/2237675255.jpg');
+  /* background:#fadfe3; */
+  color: #333;
+}
+
+.userinfo {
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500rpx;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+#body {
+  margin: 30rpx 0;
+}
+
+/* 授权弹框 */
+
+.tankuang {
+  padding-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tankuang .txt {
+  color: #7b7b7b;
+  font-weight: 700;
+  font-size: 30rpx;
+  margin-bottom: 60rpx;
+}

@@ -1,0 +1,39 @@
+/* pages/wxpay/wxpay.wxss */
+
+.pay {
+    width: 550rpx;
+    height: 570rpx;
+    padding: 40rpx 30rpx 0 30rpx;
+}
+
+.pay-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pay-down-up{
+    font-size: 28rpx;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pay-down-up .right{
+    display: flex;
+     align-items: center;
+}
+.password{
+    margin-top: 60rpx;
+    margin-bottom: 20rpx;
+    display: flex
+}
+.pay-down-down{
+    flex:1;
+    height: 90rpx;
+    border-left: 1px solid #ccc;
+     border-bottom: 1px solid #ccc;
+     border-top: 1px solid #ccc;
+}
+.password:last-child{
+    border-right: 1px solid #ccc;
+}

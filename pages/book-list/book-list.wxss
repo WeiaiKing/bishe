@@ -1,0 +1,46 @@
+page{
+ background: #f8f8f8;
+}
+#book-list{
+  display: flex;
+  margin: 30rpx 15rpx 30rpx 30rpx;
+  flex-wrap: wrap;
+}
+.economics {
+  position: relative;
+  height: 300rpx;
+  width: 338rpx;
+  margin:0 15rpx 15rpx 0;
+  border-radius: 10rpx;
+  background: #fff;
+}
+
+.mask {
+  height: 300rpx;
+  width: 338rpx;
+  background: #4c4c4c;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40rpx;
+  margin-left: -81rpx;
+  color: #e5e5e5;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.van-tabbar-item__icon{
+  font-size: var(--tabbar-item-icon-size,27px)!important;
+  margin-bottom: var(--tabbar-item-margin-bottom,0px)!important;
+
+}
+.van-tabbar{
+  /* height: var(--tabbar-height,60rpx)!important; */
+
+}
+

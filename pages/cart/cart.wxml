@@ -1,0 +1,35 @@
+<van-notice-bar mode="closeable" backgroundColor="#fef9e5" color="#111" text="购物车中有1件商品已降价，快去看看" />
+<view id="container" wx:for="{{cart_list}}" wx:key="id">
+  <view id="carSelect" bindtap="goDetail" data-item="{{item}}">
+    <view>
+      <van-checkbox value="{{ item.checked }}" checked-color="#ff8780" catchtap="selectChange" data-checkedID="{{[item.price-4.00,item.id]}}">
+      </van-checkbox>
+    </view>
+    <image src="{{item.imgUrl}}" style="width:150rpx;height:180rpx;margin:0 30rpx"></image>
+    <view class="carSelect_right">
+      <view>
+        {{item.commodity.name}}
+      </view>
+      <view style="font-size:26rpx;color:#969696"> 作者: {{item.author}}</view>
+      <view class="carSelect_right_bottom">
+        <view>
+          <text style="color:#ff8780;">￥{{item.price - 4}}</text>
+          <text style="color:#9c9c9c;font-size:24rpx;text-decoration:line-through;margin:0 30rpx 0 15rpx;">￥{{item.price}}</text>
+        </view>
+        <view catchtap="empty">
+          <van-stepper value="1" input-width="60rpx" button-size="50rpx" catch:change="selectNum" data-price="{{item.price -4}}"/>
+        </view>
+      </view>
+    </view>
+  </view>
+ 
+</view>
+ <view style="height:120rpx;"></view>
+  <!-- 底部部分 -->
+  <view class="bottom">
+    <view>
+      <span>合计</span>
+      <span style="color:#ff8780;">￥{{total}}</span>
+    </view>
+    <van-button type="info" round color="#ff8780" bindtap="goPay">立即结算</van-button>
+  </view>

@@ -1,0 +1,64 @@
+#star {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#star .texta {
+  width: 630rpx;
+  height: 200rpx;
+  padding: 30rpx;
+  box-shadow: 0px 0px 1px 0px #bfbfbf;
+}
+
+#bottom-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 160rpx;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 0px 3px 0px #bfbfbf;
+}
+
+#bottom-btn button:not([size='mini']) {
+  width: 440rpx;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+#star image {
+  box-shadow: 0px 0px 10px 5px #ddd;
+  height: 250rpx;
+  width: 200rpx;
+  margin: 50rpx 0 ;
+}
+
+.sign_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    height: 100vh;
+}
+
+.sign_up_img {
+    width: 204rpx;
+    height: 204rpx;
+    margin: 200rpx 0 80rpx 0;
+}
+
+.sign_up button:not([size='mini']) {
+  
+    min-height: 88rpx;
+    width: 314rpx;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    color: #4c5bff;
+    font-size: 34rpx;
+}

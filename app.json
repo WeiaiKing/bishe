@@ -1,0 +1,104 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index-search/index-search",
+    "pages/index-detail/index-detail",
+    "pages/index-detail-star/index-detail-star",
+    "pages/index-detail-comment/index-detail-comment",
+    "pages/index-detail-buy/index-detail-buy",
+    "pages/sell/sell",
+    "pages/sell-buy/sell-buy",
+    "pages/sell-public/sell-public",
+    "pages/sell-rule/sell-rule",
+    "pages/sell-phace/sell-phace",
+    "pages/book-list/book-list",
+    "pages/book-list-detail/book-list-detail",
+    "pages/cart/cart",
+    "pages/cart-rule/cart-rule",
+    "pages/user-address/user-address",
+    "pages/user-address-confirm/user-address-confirm",
+    "pages/user/user",
+    "pages/wxpay/wxpay",
+    "pages/user-setting/user-setting",
+    "pages/user-service/user-service",
+    "pages/user-message/user-message",
+    "pages/user-wallet/user-wallet",
+    "pages/user-address-create/user-address-create",
+    "pages/user-address-editor/user-address-editor",
+    "pages/user-order/user-order",
+    "pages/user-order-detail/user-order-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#1e1e1e",
+    "selectedColor": "#fe3a2f",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab_icon/index1.png",
+        "selectedIconPath": "images/tab_icon/index2.png"
+      },
+      {
+        "pagePath": "pages/sell/sell",
+        "text": "卖书",
+        "iconPath": "images/tab_icon/sell1.png",
+        "selectedIconPath": "images/tab_icon/sell2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/tab_icon/car1.png",
+        "selectedIconPath": "images/tab_icon/cart2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tab_icon/mine1.png",
+        "selectedIconPath": "images/tab_icon/mine2.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-grid": "components/vant-weapp/grid/index",
+    "van-grid-item": "components/vant-weapp/grid-item/index",
+    "van-icon": "components/vant-weapp/icon/index",
+    "van-tag": "components/vant-weapp/tag/index",
+    "van-cell": "components/vant-weapp/cell/index",
+    "van-cell-group": "components/vant-weapp/cell-group/index",
+    "van-collapse": "components/vant-weapp/collapse/index",
+    "van-collapse-item": "components/vant-weapp/collapse-item/index",
+    "van-popup": "components/vant-weapp/popup/index",
+    "van-button": "components/vant-weapp/button/index",
+    "van-index-bar": "components/vant-weapp/index-bar/index",
+    "van-index-anchor": "components/vant-weapp/index-anchor/index",
+    "van-goods-action": "components/vant-weapp/goods-action/index",
+    "van-goods-action-icon": "components/vant-weapp/goods-action-icon/index",
+    "van-goods-action-button": "components/vant-weapp/goods-action-button/index",
+    "van-stepper": "components/vant-weapp/stepper/index",
+    "van-checkbox": "components/vant-weapp/checkbox/index",
+    "van-checkbox-group": "components/vant-weapp/checkbox-group/index",
+    "van-switch": "components/vant-weapp/switch/index",
+    "van-tab": "components/vant-weapp/tab/index",
+    "van-tabs": "components/vant-weapp/tabs/index",
+    "van-notice-bar": "components/vant-weapp/notice-bar/index",
+    "van-divider": "components/vant-weapp/divider/index",
+    "van-card": "components/vant-weapp/card/index",
+    "van-steps": "components/vant-weapp/steps/index",
+    "van-tabbar": "components/vant-weapp/tabbar/index",
+    "van-tabbar-item": "components/vant-weapp/tabbar-item/index",
+    "van-dropdown-menu": "components/vant-weapp/dropdown-menu/index",
+    "van-dropdown-item": "components/vant-weapp/dropdown-item/index",
+    "van-rate": "components/vant-weapp/rate/index",
+    "van-dialog": "components/vant-weapp/dialog/index"
+  }
+}

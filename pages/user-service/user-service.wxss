@@ -1,0 +1,28 @@
+#user_service {
+  padding: 30rpx;
+}
+
+.service_img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#contact {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact {
+  margin-top: 30rpx;
+  width: 335rpx;
+  height: 310rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #edebec;
+  flex-direction: column;
+}

@@ -1,0 +1,161 @@
+<view id="index-detail">
+  <view id="header">
+    <image src="{{detail.imgUrl}}" class="header_img"></image>
+    <image src="{{detail.imgUrl}}" class="header_background_img"></image>
+  </view>
+  <view id="public" wx:if="{{public}}"> 
+    <image src="https://picsum.photos/200"></image>
+    <view>
+      <view>已卖出10本</view>
+      <view style="margin-top:10rpx;">
+        <text>发布者：</text>
+        <text>A king</text>
+      </view>
+    </view>
+  </view>
+  <view id="de_body">
+    <text style="font-weight:700;">{{detail.name}}</text>
+    <view class="de_body_price">
+      <text style="color:#eb4d3d;margin:0 15rpx 0 -5rpx;">￥{{detail.price}}</text>
+      <text class="discount">2折</text>
+    </view>
+    <view>
+      <text style="color:#969696;" decode="{{true}}">原&emsp;价：</text>
+      <text>￥{{detail.price}}</text>
+    </view>
+    <view style="margin:15rpx 0;">
+      <text style="color:#969696" decode="{{true}}">作&emsp;者：</text>
+      <text>{{detail.author}}</text>
+    </view>
+    <view>
+      <text style="color:#969696">出版社：</text>
+      <text>{{detail.press}}</text>
+    </view>
+    <view style="margin-top:15rpx;">
+      <text style="color:#969696">出版年：</text>
+      <text>{{detail.years}}</text>
+    </view>
+  </view>
+
+  <view id="introduction">
+    <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="简介和目录" name="1">
+        {{detail.desc}}
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+
+  <view id="comment">
+    <view class="flex-row" style="justify-content: space-between;margin-bottom:20rpx;">
+      <view style="">圈友评论</view>
+      <view class="flex-row" style="align-items: center;" bindtap="goStar">
+        <image src="/images/star.png" style="height:30rpx;width:30rpx;margin-right:10rpx;"></image>
+        <view style="color:#5abfab">给书评分</view>
+      </view>
+    </view>
+    <view class="flex-row" style="font-size:28rpx;">
+      <image src="https://picsum.photos/200" style="height:60rpx;width:60rpx;border-radius:50%;margin-right:30rpx;"></image>
+      <view>
+        <view>阿金King</view>
+        <view style="margin-top:10rpx;width:590rpx;">
+          <text>为什么推荐这本书呢？因为它真的很棒啦！</text>
+        </view>
+        <view style="margin-top:20rpx">
+          <image src="/images/comment.png" style="height:40rpx;width:40rpx;" bindtap="goComment"></image>
+          <text style="margin:0 60rpx 0 10rpx;">{{comment_num}}</text>
+          <image src="{{zan_img}}" style="height:40rpx;width:40rpx;" bindtap="changeImg" data-url="{{zan_img}}"></image>
+          <text style="margin-left:10rpx;">{{zan_num}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <view id="content-bottom">
+    <view class="define_cell" style="margin-bottom:0;">
+      <view style="display:flex;align-items:center">
+        <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+        <span style="font-weight:700">相关书籍</span>
+      </view>
+    </view>
+    <view class="content-bottom">
+      <van-grid column-num="3" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{ aboutData[0].child }}" wx:key="index">
+          <view bindtap="go_detail" data-item="{{item}}">
+            <image src="{{item.imgUrl}}" style="width: 180rpx; height: 230rpx;"></image>
+            <view class="ref">{{item.name}}</view>
+            <view class="content_bottom">
+              <view>
+                <view style="color:#ff8780;">￥{{item.price}}</view>
+              </view>
+            </view>
+          </view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+    <view style="height:200rpx;"></view>
+  </view>
+
+  <view id="goods-bottom">
+    <van-goods-action safe-area-inset-bottom>
+      <van-goods-action-icon icon="like-o" text="收藏" />
+      <van-goods-action-icon icon="cart-o" text="购物车" info="{{cartNum}}" style="margin-left:-16rpx;" link-type="switchTab" url="/pages/cart/cart" />
+      <van-goods-action-button text="加入购物车" type="warning" bindtap="add_cart" />
+      <van-goods-action-button text="立即购买" bindtap="add_buy" />
+    </van-goods-action>
+  </view>
+
+  <view id="popup">
+    <view class="popup_cart">
+      <van-popup show="{{ add_cart }}" closeable close-icon="close" position="bottom" custom-style="height: 55%;" bind:close="add_cart_cloce" round>
+        <view class="dialog_cart">
+          <view>认识经济</view>
+          <van-cell title="不同品相有何区别" value="查看" is-link url="../cart-rule/cart-rule" />
+          <view>
+            <view class="{{select==1?'border-active':'border'}}" bindtap="select" data-id="1">
+              <text>￥10.3</text>
+              <text>轻度污渍</text>
+            </view>
+            <view class="{{select==2?'border-active':'border'}}" bindtap="select" data-id="2">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，轻度污渍，磨损或破损</text>
+            </view>
+            <view class="{{select==3?'border-active':'border'}}" bindtap="select" data-id="3">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，附着胶带或标签</text>
+            </view>
+          </view>
+          <van-button type="warning" round bindtap="cart_confirm" class="fix-botttom">确定</van-button>
+        </view>
+      </van-popup>
+    </view>
+    <view class=" popup_buy ">
+      <van-popup show="{{ add_buy }}" closeable close-icon="close" position="bottom" custom-style="height: 55%;" bind:close="add_buy_cloce" round>
+        <view class="dialog_cart">
+          <view>认识经济</view>
+          <view>
+            <view class="{{select==1?'border-active':'border'}}" bindtap="select" data-id="1">
+              <text>￥10.3</text>
+              <text>轻度污渍</text>
+            </view>
+            <view class="{{select==2?'border-active':'border'}}" bindtap="select" data-id="2">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，轻度污渍，磨损或破损</text>
+            </view>
+            <view class="{{select==3?'border-active':'border'}}" bindtap="select" data-id="3">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，附着胶带或标签</text>
+            </view>
+          </view>
+          <view class="buy_num">
+            <view>购买数量</view>
+            <view>
+              <van-stepper value="{{ 1 }}" input-width="60rpx" button-size="50rpx" />
+            </view>
+          </view>
+          <van-button type="warning" round bindtap="buy_confirm">确定</van-button>
+        </view>
+      </van-popup>
+
+    </view>
+  </view>
+</view>

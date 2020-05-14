@@ -1,0 +1,136 @@
+.error_flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.scan_book_list {
+  padding: 30rpx;
+  margin: 40rpx;
+  display: flex;
+  background: #fff;
+}
+
+.scan_book_list_item {
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.scan {
+  position: fixed;
+  z-index: 99;
+  bottom: 150rpx;
+  background: #ff8780;
+  width: 300rpx;
+  height: 75rpx;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0rpx 5px 0px #4c4c4c;
+  margin-left: -150rpx;
+  left: 50%;
+}
+
+.sell_book {
+  position: fixed;
+  bottom: 0rpx;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f8;
+  width: 750rpx;
+  box-sizing: border-box;
+  height: 130rpx;
+}
+
+.next {
+  margin-right: 30rpx;
+  background: #ff8780;
+  text-align: center;
+  line-height: 70rpx;
+  width: 170rpx;
+  height: 70rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.down-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px rgba(218, 218, 218, 1);
+}
+
+/* #info{
+  margin: 30rpx;
+} */
+
+#info .down-menu-flex {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  box-shadow: 0px 1px 0px 0px rgba(218, 218, 218, 1);
+}
+
+page {
+  background: rgba(241, 242, 244, 1);
+}
+
+#info {
+  color: #333;
+  margin: 40rpx 40rpx 0 40rpx;
+  width: 670rpx;
+  height: 608rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.van-popup--top {
+  top: 0;
+  left: 0;
+  width: 90% !important;
+  margin: 0 40rpx;
+}
+
+#info .discound {
+  border: 1px solid #666;
+  text-align: center;
+  width: 70rpx;
+  border-radius: 6rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+
+}
+
+
+.sign_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    height: 100vh;
+}
+
+.sign_up_img {
+    width: 204rpx;
+    height: 204rpx;
+    margin: 200rpx 0 80rpx 0;
+}
+
+.sign_up button:not([size='mini']) {
+  
+    min-height: 88rpx;
+    width: 314rpx;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    color: #4c5bff;
+    font-size: 34rpx;
+}

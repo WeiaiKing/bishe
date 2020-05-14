@@ -1,0 +1,42 @@
+page {
+  background: #f3f3f3;
+}
+
+.notorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav_txt {
+  white-space: nowrap;
+}
+
+.nav_txt_item {
+  margin-right: 15rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.sell {
+  margin: 30rpx;
+  padding: 15rpx;
+  background: #fff;
+}
+
+.sell_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:15rpx;
+}
+
+
+.sell_bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

@@ -1,0 +1,35 @@
+page {
+  background: #f7f7f8;
+}
+
+.sell_book {
+  font-size: 28rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.next {
+  margin-left: 50rpx;
+  border: 2rpx solid #ff8780;
+  /* background: #ff8780; */
+  text-align: center;
+  line-height: 50rpx;
+  width: 170rpx;
+  height: 50rpx;
+  color: #ff8780;
+  border-radius: 10rpx;
+}
+
+.time {
+  width: 400rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  margin: 30rpx auto;
+  background: #d6d6d6;
+}

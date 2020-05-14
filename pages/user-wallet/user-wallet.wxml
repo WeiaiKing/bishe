@@ -1,0 +1,15 @@
+<view id="user_wallet">
+  <view class="user_wallet">
+    <view class="flex_center">
+      <view style="width:50rpx;height:4rpx;background:#ebe2d0"></view>
+      <view style="color:#ebe2d0;font-size:28rpx;margin:0 30rpx;">余额(元)</view>
+      <view style="width:50rpx;height:4rpx;background:#ebe2d0"></view>
+    </view>
+    <view style="font-size:70rpx;">0.00</view>
+    <van-button type="primary" round color="#ebe2d0">余额提现</van-button>
+    <view style="display:flex" bindtap="rule">
+      <view style="color:#aaaaa9;font-size:24rpx;margin-right:10rpx;">提现规则</view>
+      <van-icon name="info-o" color="#aaaaa9" size="12"/>
+    </view>
+  </view>
+</view>

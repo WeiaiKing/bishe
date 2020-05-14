@@ -1,0 +1,91 @@
+<block wx:if="{{confirm}}">
+<view id="container">
+    <view id="notice">
+        <van-notice-bar mode="closeable" text="提示:平台支持同城送货上门！" />
+    </view>
+    <view id="address_cell">
+        <van-cell-group>
+            <van-cell title="{{address_list.province}}{{address_list.city}}{{address_list.district}}{{address_list.content}}" title-width="615rpx;" label="{{address_list.name}} {{address_list.phone}}" border="{{ false }}" icon="/images/address1.png" color="red" is-link
+                url="/pages/user-address-confirm/user-address-confirm" title-class="cell_title" />
+        </van-cell-group>
+        <view style="display:flex;">
+            <block wx:for="{{10}}" wx:key="index">
+                <view style="background:#607fcb;height:6rpx;width:30rpx;margin-right:15rpx;"></view>
+                <view style="background:#f17d8b;width:30rpx;height:6rpx;margin-right:15rpx;"></view>
+            </block>
+        </view>
+    </view>
+    <view id="pre-time">
+        <view>预约时间</view>
+        <input placeholder="快速上门时间" disabled bindtap="popup" value="{{week}} {{time}}" style="width:400rpx;font-size:30rpx;"></input>
+        <view>></view>
+    </view>
+    <view id="commodity">
+        <block wx:for="{{scan_book}}">
+            <van-card num="1" price="{{item.priche}}" desc="作者：{{item.author}}" title="{{item.title}}{{item.subtitle}}" thumb="{{item.images.small}}" />
+        </block>
+        <van-divider/>
+    </view>
+    <view id="bottom-content">
+        <view class="bottom_flex">
+            <span>书籍总价</span>
+            <span style="color:#ff8780">￥{{scan_book[0].price}}</span>
+        </view>
+        <van-divider/>
+        <view class="bottom_flex">
+            <span>书籍运费</span>
+            <span style="color:#ff8780">0.00</span>
+        </view>
+        <van-divider/>
+        <view style="text-align:right;height:80rpx;margin-top:40rpx;">
+            <span>小计</span>
+            <span style="color:#ff8780">￥{{scan_book[0].price}}</span>
+        </view>
+    </view>
+    <view id="popup ">
+        <van-popup show="{{ popup }}" position="bottom" round custom-style="height: 65%;" bind:close="onClose">
+            <view style="text-align:center;margin-top:30rpx">选择上门时间</view>
+            <view style="height:2rpx;background:#e8e8e8;margin:15rpx 30rpx"></view>
+            <view class="dialog">
+                <view class="dialog_right">
+                    <van-button color="{{week=='周一(4月13日)'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selctWeek" data-week="周一(4月13日)">周一(4月13日)</van-button>
+                    <van-button color="{{week=='周二(4月14日)'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selctWeek" data-week="周二(4月14日)">周二(4月14日)</van-button>
+                    <van-button color="{{week=='周三(4月15日)'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selctWeek" data-week="周三(4月15日)">周三(4月15日)</van-button>
+                    <van-button color="{{week=='周四(4月16日)'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selctWeek" data-week="周四(4月16日)">周四(4月16日)</van-button>
+                    <van-button color="{{week=='周五(4月10日)'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selctWeek" data-week="周五(4月10日)">周五(4月10日)</van-button>
+                    <van-button color="{{week=='周六(4月11日)'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selctWeek" data-week="周六(4月11日)">周六(4月11日)</van-button>
+                </view>
+                <view class="dialog_left">
+                    <van-button color="{{time=='10:00-11:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="10:00-11:00">10:00-11:00</van-button>
+                    <van-button color="{{time=='11:00-12:00'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selectTime" data-time="11:00-12:00">11:00-12:00</van-button>
+                    <van-button color="{{time=='12:00-13:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="12:00-13:00">12:00-13:00</van-button>
+                    <van-button color="{{time=='13:00-14:00'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selectTime" data-time="13:00-14:00">13:00-14:00</van-button>
+                    <van-button color="{{time=='14:00-15:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="14:00-15:00">14:00-15:00</van-button>
+                    <van-button color="{{time=='15:00-16:00'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selectTime" data-time="15:00-16:00">15:00-16:00</van-button>
+                    <van-button color="{{time=='16:00-17:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="16:00-17:00">16:00-17:00</van-button>
+                </view>
+            </view>
+            <view class="dialog-confirm">
+                <van-button type="warning" round bindtap="time_confirm">确定</van-button>
+            </view>
+        </van-popup>
+
+    </view>
+    <view style="height:20rpx;"></view>
+    <!-- 底部部分 -->
+    <view class="bottom" style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
+        <!-- <view>
+            <span>需支付</span>
+            <span style="color:#ff8780;">￥47.00</span>
+        </view> -->
+        <van-button type="info" round color="#ff8780" bindtap="wxPay">提价订单</van-button>
+    </view>
+</view>
+</block>
+
+<view class="sign_up" wx:else>
+    <image src="/images/success.png" class="sign_up_img"></image>
+    <view>提交成功</view>
+    <view style="margin:26rpx 0 40rpx 0;">管理员审核通过后将在平台通知</view>
+    <van-button round type="info" bindtap="returnSell" color="#EEEFF1" custom-style="color:#ff8780;">返回</van-button>
+</view>

@@ -1,0 +1,73 @@
+<view id="detail-comment">
+  <view id="book-info" class="flex-row info">
+    <image src="{{detail.imgUrl}}"></image>
+    <view >
+      <view>{{detail.name}}</view>
+      <view style="font-size:26rpx;color:#969696;margin-top:20rpx;">作者:{{detail.author}}</view>
+    </view>
+  </view>
+  <view id="comment">
+    <view class="flex-row">
+      <image src="https://picsum.photos/120" style="height:60rpx;width:60rpx;border-radius:50%;margin-right:20rpx;"></image>
+      <view>阿金King</view>
+    </view>
+    <view style="margin:20rpx 0;">
+      <text>为什么推荐这个本书
+     这本书写的特别棒，深入浅出，讲解到位，我理解了不少以前不懂的知识点。非常感谢作者！
+      </text>
+    </view>
+    <view class="flex-row" style=" justify-content: space-between;">
+      <view class="flex-row">
+        <view>
+          <image src="/images/share.png" style="height:30rpx;width:30rpx;"></image>
+          <text style="color:#bfbfbf;margin:0 60rpx 0 10rpx;">分享</text>
+        </view>
+        <image src="{{zan_img}}" style="height:40rpx;width:40rpx;" bindtap="changeImg" data-url="{{zan_img}}"></image>
+      </view>
+      <text style="color:#bfbfbf">2020-03-12</text>
+    </view>
+  </view>
+  <view id="words">
+    <view style="margin-top:30rpx;color:#bfbfbf">3条留言</view>
+    <view class="flex-row words">
+      <image src="https://picsum.photos/300" style="height:60rpx;width:60rpx;border-radius:50%;margin-right:20rpx;"></image>
+      <view class="flex-col">
+        <text>阿金-king:</text>
+        <text style="margin:10rpx 0 20rpx 0;">受益匪浅</text>
+        <text style="color:#bfbfbf">2020-03-12</text>
+      </view>
+    </view>
+    <view class="flex-row words">
+      <image src="https://picsum.photos/120" style="height:60rpx;width:60rpx;border-radius:50%;margin-right:20rpx;"></image>
+      <view class="flex-col">
+        <text>-king:</text>
+        <text style="margin:10rpx 0 20rpx 0;">干货</text>
+        <text style="color:#bfbfbf">2020-03-12</text>
+      </view>
+    </view>
+    <view class="flex-row words">
+      <image src="https://picsum.photos/200" style="height:60rpx;width:60rpx;border-radius:50%;margin-right:20rpx;"></image>
+      <view class="flex-col">
+        <text>金-king:</text>
+        <text style="margin:10rpx 0 20rpx 0;">挺好
+        857
+      857
+        </text>
+        <text style="color:#bfbfbf">2020-03-12</text>
+      </view>
+    </view>
+  </view>
+  <view style="height:150rpx;"></view>
+</view>
+
+
+<view id="dialog">
+  <van-dialog use-slot show="{{ show }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose" confirmButtonText="发送" bind:getuserinfo="getUserInfo">
+    <view id="comment-public">
+      <textarea placeholder="留个言谈谈的见解吧" placeholder-style="color:#999999;font-size:28rpx;" bindblur="get_contents" maxlength="1500" style="height:300rpx;padding:30rpx;"></textarea>
+    </view>
+  </van-dialog>
+</view>
+<view id="bottom-input">
+  <view class="bottom-text" bindtap="showDialog">留个言...</view>
+</view>

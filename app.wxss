@@ -1,0 +1,55 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/* button隐藏样式 start*/
+
+.auth {
+    position: relative;
+    margin-bottom: 15rpx;
+}
+
+.auth > .btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+}
+
+.auth > .btn button {
+    height: 100%;
+    width: 100%;
+}
+
+/* button隐藏样式 end */
+
+.flex-row{
+  align-items: center;
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column
+}
+
+/* 文字两行显示 */
+
+.ref {
+    text-overflow: -o-ellipsis-lastline;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

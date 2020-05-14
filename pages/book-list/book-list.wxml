@@ -1,0 +1,17 @@
+<view id="book-list">
+  <block wx:for="{{book_list}}" wx:key="index" >
+    <view class="economics" bindtap="go_book_detail" data-id="{{item.text}}">
+      <view class="mask" ></view>
+      <view class="text">{{item.name}}</view>
+      <image src="{{item.url}}" style="width:338rpx;height:300rpx;" mode="aspectFit"></image>
+    </view>
+  </block>
+  <view style="height:120rpx;width:100%;"></view>
+</view>
+ <van-tabbar active="{{ active }}" bind:change="onChange" active-color="#969696"
+  inactive-color="#969696"  z-index="99">
+  <van-tabbar-item icon="/images/tab_icon/index1.png">首页</van-tabbar-item>
+  <van-tabbar-item icon="/images/tab_icon/sell1.png">卖书</van-tabbar-item>
+  <van-tabbar-item icon="/images/tab_icon/car1.png">购物车</van-tabbar-item>
+  <van-tabbar-item icon="/images/tab_icon/mine1.png">我的</van-tabbar-item>
+</van-tabbar>

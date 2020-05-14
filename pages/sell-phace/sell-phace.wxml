@@ -1,0 +1,139 @@
+<view id="sell-phace">
+  <view id="header">
+    <view style="font-size:40rpx;margin-bottom:20rpx;">书籍品相审核分级细则</view>
+    <view>书享书在收到书时会进行品相审核，这一步会把书籍的品相分为品相良好、品相中等、品相不合格，其中品相中等的收购价比品相良好的要低 20%，品相不合格的书会被拒收。
+    </view>
+  </view>
+  <view id="phace-good">
+    <view style="margin-bottom:20rp;">品相良好</view>
+    <view>
+      有不明显使用痕迹或瑕疵的书籍、扉页/衬页存在少量文字或盖章的书籍都属于品相良好。对于未拆封的新书，同样以良好品相进行收购。
+    </view>
+  </view>
+  <view id="good-img">
+    <view class="opselect" bindtap="open_icon_good" wx:if="{{open_icon_good}}">
+      <view class="open">品相良好图片实例</view>
+      <van-icon name="arrow-down" color="	#ff8780" size="26rpx" />
+    </view>
+    <block wx:else>
+      <view class="commonly-img">
+        <image src="/images/poor/good1-2.png" style="width:690rpx;height:280rpx;"></image>
+        <view class="good-flex">
+          <image src="/images/poor/good5-2.png" style="width:330rpx;height:330rpx;"></image>
+          <image src="/images/poor/good2-2.png" style="width:330rpx;height:330rpx;"></image>
+        </view>
+        <view class="good-flex">
+          <image src="/images/poor/good3-2.png" style="width:330rpx;height:330rpx;"></image>
+          <image src="/images/poor/good4-2.png" style="width:330rpx;height:330rpx;"></image>
+        </view>
+      </view>
+      <view class="opselect" bindtap="openGood">
+        <view class="open">收起</view>
+        <van-icon name="arrow-up" color="	#ff8780" size="26rpx" />
+      </view>
+    </block>
+  </view>
+  <view id="phace-commonly">
+    <view style="margin-bottom:20rp;">品相中等</view>
+    <view>
+      有较明显的使用痕迹和轻度瑕疵，但不影响正常阅读。收购价比品相良好要低 20%。
+    </view>
+  </view>
+  <view id="commonly-img">
+    <view class="opselect" bindtap="open_icon" wx:if="{{open_icon}}">
+      <view class="open">品相中等图片实例</view>
+      <van-icon name="arrow-down" color="	#ff8780" size="26rpx" />
+    </view>
+    <block wx:else>
+      <view class="commonly-img">
+        <view class="poor-img-flex-father">
+          <view class="poor-img-flex">
+            <image src="/images/poor/commonly1.png" style="width:330rpx;height:330rpx;"></image>
+            <view>划线或标注过多拒收</view>
+          </view>
+          <view class="poor-img-flex">
+            <image src="/images/poor/commonly2.png" style="width:330rpx;height:330rpx;"></image>
+            <view>严重破损拒收</view>
+          </view>
+        </view>
+        <view class="poor-img-flex-father">
+          <view class="poor-img-flex">
+            <image src="/images/poor/commonly3.png" style="width:330rpx;height:330rpx;"></image>
+            <view>严重破损拒收</view>
+          </view>
+          <view class="poor-img-flex">
+            <image src="/images/poor/commonly4.png" style="width:330rpx;height:330rpx;"></image>
+            <view>严重破损拒收</view>
+          </view>
+        </view>
+      </view>
+      <view class="opselect" bindtap="open">
+        <view class="open">收起</view>
+        <van-icon name="arrow-up" color="	#ff8780" size="26rpx" />
+      </view>
+    </block>
+  </view>
+  <view id="phace-poor">
+    <view style="margin-bottom:20rp;">品相不合格</view>
+    <view>
+      书籍品相已经影响书的下一位主人的使用和阅读体验，并且无法修复时，书将被拒收（首次免费取回），不会将其上架售卖。
+    </view>
+
+  </view>
+  <view id="poor-img">
+    <view class="opselect" bindtap="open_icon_poor" wx:if="{{open_icon_poor}}">
+      <view class="open">品相不合格图片实例</view>
+      <van-icon name="arrow-down" color="	#ff8780" size="26rpx" />
+    </view>
+    <block wx:else>
+      <view class="poor-text">
+        <view>品相不合格</view>
+        <view>书籍品相已经影响书的下一位主人的使用和阅读体验，并且无法修复时，书将被拒收（首次免费取回），不会将其上架售卖。</view>
+        <view>品相不合格主要包括以下几种情况：</view>
+        <view>严重污渍：无法被清洁掉的大面积或让人产生明显不适的霉斑、油渍、水渍等；</view>
+        <view>含馆藏类印章或标签：书籍权属不明，不适宜循环售卖；如果你有能够证明权属关系的批量处理馆藏书籍的需求，请邮件联系书享书 b2b 小组：</view>
+        <view>b2b@duozhuayu.net</view>
+        <view>严重破损：影响正常阅读的封面破损、书脊破损、内页破损或开胶脱页；</view>
+        <view>
+          划线或标注过多：导致正文辨识不清的划线或标注，和正文无关的大面积乱涂乱画；</view>
+        <view>习题册已做：做题后失去使用价值；</view>
+        <view>附件缺失：附件缺失后影响书籍使用和阅读，如解密卡；</view>
+        <view>漏印或错印：导致书籍无法完整阅读的漏印或错印；</view>
+        <view>严重变形：影响正常阅读的书籍变形；</view>
+        <view>严重异味：影响正常阅读的浓重霉味或其他让人产生明显不适的气味；</view>
+        <view>音像制品：磁带、光盘或以其为主体的商品。</view>
+      </view>
+      <view class="poor-img">
+        <view class="poor-img-flex-father">
+          <view class="poor-img-flex">
+            <image src="/images/poor/bu1.png" style="width:330rpx;height:330rpx;"></image>
+            <view>划线或标注过多拒收</view>
+          </view>
+          <view class="poor-img-flex">
+            <image src="/images/poor/bu2.png" style="width:330rpx;height:330rpx;"></image>
+            <view>严重破损拒收</view>
+          </view>
+        </view>
+        <view class="poor-img-flex-father">
+          <view class="poor-img-flex">
+            <image src="/images/poor/bu3.png" style="width:330rpx;height:330rpx;"></image>
+            <view>严重破损拒收</view>
+          </view>
+          <view class="poor-img-flex">
+            <image src="/images/poor/bu4.png" style="width:330rpx;height:330rpx;"></image>
+            <view>严重破损拒收</view>
+          </view>
+        </view>
+
+      </view>
+      <view class="opselect" bindtap="openPoor">
+        <view class="open">收起</view>
+        <van-icon name="arrow-up" color="	#ff8780" size="26rpx" />
+      </view>
+    </block>
+  </view>
+  <view id="phace-other">
+    <view> 其他不合格原因</view>
+    <view>非卖品、盗版书、套装书缺册和非法出版物是会被拒收的。</view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<view wx:if="{{isconfirm_build}}">
+  <view class="boby">
+    <view class="body_flex">
+      <view>收货人</view>
+      <input placeholder="请填写收货地址姓名" placeholder-style="color:#999999;font-size:32rpx;" value="{{name}}" bindblur="get_name"></input>
+    </view>
+    <view class="body_flex">
+      <view>手机号</view>
+      <input placeholder="请填写收货人手机号" placeholder-style="color:#999999;font-size:32rpx;" value="{{phone}}" bindblur="get_phone"></input>
+    </view>
+    <view class="section">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="body_flex">
+          <view>收货地址</view>
+          <input value="{{region[0]}}{{region[1]}}{{region[2]}}" placeholder="请输入职位名称" placeholder-style="color:#ff8780;font-size:32rpx;" disabled style="width:450rpx;"></input>
+        </view>
+      </picker>
+    </view>
+    <view class="body_flex">
+      <view>门牌号</view>
+      <input placeholder="详细地址.咧如:1号楼302" placeholder-style="color:#999999;font-size:32rpx;" value="{{content}}" bindblur="get_content" style="width:450rpx;"></input>
+    </view>
+    <view class="body_flex">
+      <view>设为默认值</view>
+      <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#ff8780" />
+    </view>
+  </view>
+  <van-button type="info" round color="#ff8780" bindtap="confirm_build" custom-style="margin:40rpx;">保存</van-button>
+</view>
+
+<view class="sign_up" wx:else>
+  <image src="/images/success.png" class="sign_up_img"></image>
+  <view>编辑成功</view>
+  <!-- <view style="margin:26rpx 0 40rpx 0;">管理员审核通过后将在平台展示</view> -->
+  <van-button round type="info" bindtap="return_index" color="#EEEFF1" custom-style="color:#ff8780;">确定</van-button>
+</view>

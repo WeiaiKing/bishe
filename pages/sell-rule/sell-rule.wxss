@@ -1,0 +1,8 @@
+.tab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tab_active{
+    border-bottom: 1px solid #07c160;
+}

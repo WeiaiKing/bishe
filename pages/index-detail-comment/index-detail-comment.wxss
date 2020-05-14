@@ -1,0 +1,47 @@
+
+#detail-comment{
+  color: #333;
+  padding: 30rpx 50rpx;
+}
+#comment{
+  padding-bottom: 30rpx;
+  box-shadow: 0px 1px 0px 0px #bfbfbf;
+}
+
+#bottom-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 150rpx;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 0px 3px 0px #bfbfbf;
+  background: #f2f2f2;
+}
+
+#bottom-input .bottom-text {
+  line-height: 80rpx;
+  width: 650rpx;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  padding-left: 15rpx;
+
+}
+
+#words .words{
+  margin: 30rpx 0;
+  align-items: flex-start;
+  padding-bottom: 30rpx;
+  box-shadow: 0px 1px 0px 0px #bfbfbf;
+}
+#book-info.info{
+  align-items: flex-start;
+}
+.info image{
+  box-shadow: 0px 0px 10px 5px #ddd;
+  height:250rpx;
+  width:200rpx;
+  margin: 0 30rpx 30rpx 0;
+}

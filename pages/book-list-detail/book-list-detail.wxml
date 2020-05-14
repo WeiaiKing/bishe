@@ -1,0 +1,30 @@
+<van-index-bar scroll-top="{{ scrollTop }}" index-list="{{ indexList}}" highlight-color="black">
+    <block wx:for='{{book_list}}' wx:key='index'>
+        <view>
+            <van-index-anchor index="1" use-slot>
+                <view class="define_cell" style="margin-bottom:0;">
+                    <view style="display:flex;align-items:center">
+                        <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+                        <span style="font-weight:700">{{item.name}}</span>
+                    </view>
+                </view>
+            </van-index-anchor>
+            <view id="content-bottom">
+                <van-grid column-num="3" border="{{ false }}">
+                    <van-grid-item use-slot wx:for="{{item.child}}" wx:for-item="items" wx:key="index">
+                        <view bindtap="go_detail" data-item="{{items}}">
+                            <image src="{{items.imgUrl}}" style="width: 180rpx; height: 230rpx;"></image>
+                            <view class="ref">{{items.name}}</view>
+                            <view class="content_bottom">
+                                <view>
+                                    <view style="color:#ff8780;">￥{{items.price}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </van-grid-item>
+                </van-grid>
+            </view>
+        </view>
+    </block>
+
+</van-index-bar>

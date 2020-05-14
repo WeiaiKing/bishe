@@ -1,0 +1,28 @@
+#cart-rule{
+font-size: 30rpx;
+  padding: 30rpx;
+}
+.header{
+  margin-bottom: 40rpx;
+  display: flex;
+  
+}
+.poor-img-flex-father {
+ 
+  display: flex;
+  justify-content: space-between;
+  color: #969696;
+  font-size: 26rpx;
+}
+
+.poor-img-flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.good-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

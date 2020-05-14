@@ -1,0 +1,81 @@
+<view id="cart-rule">
+  <view id="header">
+    <view class="header">
+      <image src="/images/bookRule1.png" style="width:100rpx;height:100rpx;"></image>
+      <view style="margin-left:20rpx;">
+        <view style="color:#d2ba91">自营全新品</view>
+        <view>书享书采购的全新书籍</view>
+        <view></view>
+      </view>
+    </view>
+    <view class="header">
+      <image src="/images/bookRule2.png" style="width:100rpx;height:100rpx;"></image>
+      <view style="width:570rpx;margin-left:20rpx;">
+        <view style="color:#5abfaa">品相良好 </view>
+        <view>有不明显的使用痕迹或瑕疵（扉页/衬页可能存在少量文字或盖章）</view>
+      </view>
+    </view>
+    <view class="header">
+      <image src="/images/bookRule3.png" style="width:100rpx;height:100rpx;"></image>
+      <view style="width:570rpx;margin-left:20rpx;">
+        <view style="color:#e38785">品相中等 </view>
+        <view>有较明显的使用痕迹、修复痕迹和轻度瑕疵，但不影响正常阅读</view>
+      </view>
+    </view>
+  </view>
+  <van-divider hairline />
+  <view id="explain">
+    <view style="margin-bottom:20rpx;"> 补充说明： </view>
+    <view>除全新品相外，不保证有腰封。 一些外版书籍的内页纸张本身就是微黄并带有凹凸质感的，不属于瑕疵。</view>
+  </view>
+  <van-divider hairline />
+  <view id="commonly-img">
+    <view style="margin:20rpx 0 ;">品相良好图片示例:</view>
+    <block>
+      <view class="commonly-img">
+       <image src="/images/poor/good1-2.png" style="width:690rpx;height:280rpx;"></image>
+        <view class="good-flex">
+            <image src="/images/poor/good5-2.png" style="width:330rpx;height:330rpx;"></image>
+            <image src="/images/poor/good2-2.png" style="width:330rpx;height:330rpx;"></image>
+        </view>
+        <view class="good-flex">
+            <image src="/images/poor/good3-2.png" style="width:330rpx;height:330rpx;"></image>
+            <image src="/images/poor/good4-2.png" style="width:330rpx;height:330rpx;"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+  <van-divider hairline />
+  <view id="commonly">
+    <view style="margin-bottom:20rpx;">品相中等的瑕疵类型包括：</view>
+    <view>有划线或标注（包含切口盖章）、轻度污渍、轻度磨损或破损（包含空白页/广告页被撕除）、轻度变形、轻度折痕、泛黄或褪色、可拆卸外封套缺失、缺失附件、印刷问题、附着胶带或标签等。</view>
+
+    <view id="commonly-img">
+      <view style="margin:20rpx 0 ;">图片实例:</view>
+      <block>
+        <view class="commonly-img">
+          <view class="poor-img-flex-father">
+            <view class="poor-img-flex">
+              <image src="/images/poor/commonly1.png" style="width:330rpx;height:330rpx;"></image>
+              <view>划线或标注过多拒收</view>
+            </view>
+            <view class="poor-img-flex">
+              <image src="/images/poor/commonly2.png" style="width:330rpx;height:330rpx;"></image>
+              <view>严重破损拒收</view>
+            </view>
+          </view>
+          <view class="poor-img-flex-father">
+            <view class="poor-img-flex">
+              <image src="/images/poor/commonly3.png" style="width:330rpx;height:330rpx;"></image>
+              <view>严重破损拒收</view>
+            </view>
+            <view class="poor-img-flex">
+              <image src="/images/poor/commonly4.png" style="width:330rpx;height:330rpx;"></image>
+              <view>严重破损拒收</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

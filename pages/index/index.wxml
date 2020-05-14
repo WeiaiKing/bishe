@@ -1,0 +1,123 @@
+<view id="container">
+    <view id="search">
+        <view class="search_content" bindtap="input">
+            <image src="/images/search.png" class="search_img"></image>
+            <input class="search_inp" confirm-type='search' value="{{value}}" placeholder="搜索湾大书享书" placeholder-class="inp_text" disabled></input>
+        </view>
+        <view class="search_classfication" bindtap="go_book_list">
+            <image src='/images/classification.png' style="width:56rpx;height:56rpx;"></image>
+            <text style="margin-top:-6rpx;color:#222;">分类</text>
+        </view>
+    </view>
+    <view id="banner">
+        <view class="page-body">
+            <view class="page-section page-section-spacing swiper">
+                <swiper circular="true" indicator-dots="true" autoplay="true" interval="4000" duration="500">
+                    <block wx:for="{{background}}" wx:key="index">
+                        <swiper-item class="swiper-item auth" bindtap="go_book_list_detail_banner">
+                            <image mode="aspectFill" src="{{item}}"></image>
+
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+        </view>
+    </view>
+    <view id="grid">
+        <van-grid column-num="5" border="{{ false }}">
+            <van-grid-item icon="/images/1.png" text="教材辅导" url="/pages/book-list-detail/book-list-detail?id=teachData" />
+            <van-grid-item icon="/images/2.png" text="经管励志" url="/pages/book-list-detail/book-list-detail?id=managementData" />
+            <van-grid-item icon="/images/3.png" text="人文社科" url="/pages/book-list-detail/book-list-detail?id=socialData" />
+            <van-grid-item icon="/images/4.png" text="科技科普" url="/pages/book-list-detail/book-list-detail?id=scienceData" />
+            <van-grid-item icon="/images/5.png" text="文艺文学" url="/pages/book-list-detail/book-list-detail?id=literatureData" />
+        </van-grid>
+    </view>
+    <view id="content-header">
+        <view class="define_cell" bindtap="go_book_list_detail">
+            <view>
+                <text style="background:#eb4d3d;color:#fff;margin-right:10rpx;border-radius:5rpx;">开学季</text>
+                <text>提前定</text>
+                <text style="margin:0 10rpx;">|</text>
+                <text style="color:#969696;">定金额售价更低</text>
+            </view>
+            <image src="/images/row.png" style="width:40rpx;height:40rpx;"></image>
+        </view>
+        <view class="content-header">
+            <view class="content-header-left" bindtap="go_book_list_detail">
+                <view>
+                    <view>限时抢购</view>
+                    <view style="color:#969696;font-size:24rpx;margin:15rpx 0 50rpx 0;">限时限量抢购</view>
+                </view>
+
+                <image src="https://img3.doubanio.com/view/subject/s/public/s4225413.jpg" style="width:160rpx;height:200rpx;margin:0 0 30rpx 40rpx;" mode="aspectFill"></image>
+
+
+            </view>
+            <view class="content-header-right" bindtap="go_book_list_detail">
+                <view class="up">
+                    <view>
+                        <view>优惠套装</view>
+                        <view style="color:#969696;font-size:24rpx;margin:10rpx 0;">大家都在买</view>
+                    </view>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s11215694.jpg" style="width:160rpx;height:150rpx;margin-right:20rpx;" mode="aspectFill"></image>
+                </view>
+                <view class="down">
+                    <view>
+                        <view>天天特价</view>
+                        <view style="color:#969696;font-size:24rpx;margin:10rpx 0;">每日低价好书等你来</view>
+                        <view style="background:#cc6d9a;width:90rpx;text-align:center;border-radius:5rpx;">1折起</view>
+                    </view>
+                    <image src="https://img3.doubanio.com/view/subject/s/public/s4368823.jpg" style="width:100rpx;height:120rpx;margin:20rpx;" mode="aspectFill"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view id="content-bottom">
+        <view class="define_cell" style="margin-bottom:0;">
+            <view style="display:flex;align-items:center">
+                <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+                <span style="font-weight:700">圈友发布</span>
+            </view>
+        </view>
+
+        <view class="content-bottom ">
+            <van-grid column-num="3" border="{{ false }}">
+                <van-grid-item use-slot wx:for="{{ friendData }}" wx:key="index">
+                    <view bindtap="go_detail1" data-item="{{item}}">
+                        <image src="{{item.imgUrl}}" style="width: 180rpx; height: 230rpx;"></image>
+                        <view c>{{item.name}}</view>
+                        <view class="content_bottom">
+                            <view>
+                                <view style="color:#ff8780;">￥{{item.price}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </van-grid-item>
+            </van-grid>
+        </view>
+    </view>
+    <view id="content-bottom">
+        <view class="define_cell" style="margin-bottom:0;">
+            <view style="display:flex;align-items:center">
+                <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+                <span style="font-weight:700">最新上架</span>
+            </view>
+        </view>
+        <view class="content-bottom ">
+            <van-grid column-num="3" border="{{ false }}">
+                <van-grid-item use-slot wx:for="{{ newData }}" wx:key="index">
+                    <view bindtap="go_detail" data-item="{{item}}">
+                        <image src="{{item.imgUrl}}" style="width: 180rpx; height: 230rpx;"></image>
+                        <view class="ref">{{item.name}}</view>
+                        <view class="content_bottom">
+                            <view>
+                                <view style="color:#ff8780;">￥{{item.price}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </van-grid-item>
+            </van-grid>
+        </view>
+    </view>
+</view>

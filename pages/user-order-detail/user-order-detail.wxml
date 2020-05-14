@@ -1,0 +1,53 @@
+<view id="user-order-detail">
+  <view id="step">
+    <van-steps steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="#ee0a24" />
+  </view>
+  <view id="commodity">
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+  </view>
+  <view id="commodity">
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+  </view>
+  <view id="bottom-content">
+    <view class="bottom_flex">
+      <text>合计</text>
+      <text>￥230.4</text>
+    </view>
+    <view class="bottom_flex">
+      <text>运费</text>
+      <text>包邮</text>
+    </view>
+    <van-divider/>
+    <view style="text-align:right;height:60rpx;margin-top:30rpx;">
+      <text>已支付</text>
+      <text style="color:#ff8780">￥230.4</text>
+    </view>
+  </view>
+  <view id="order-detail">
+    <view>
+      <text>订单编号：</text>
+      <text>9939938288737374d</text>
+    </view>
+    <view>
+      <text decode="{{true}}">发&ensp;货&ensp;人：</text>
+      <text>阿金</text>
+    </view>
+
+    <view>
+      <text>取书地址：</text>
+      <text>钦州市北部湾大学4-115</text>
+    </view>
+  </view>
+  <view style="height:120rpx;"></view>
+  <view id="bottom-but">
+    <!-- 底部部分 -->
+    <view>
+      <van-button type="default"  plain round style="margin-right:15rpx;"bindtap="goUserService">联系客服</van-button>
+      <van-button type="default" color="#ff8780"  plain round >确认收货</van-button>
+    </view>
+  </view>
+</view>

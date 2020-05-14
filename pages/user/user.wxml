@@ -1,0 +1,30 @@
+<view id="container">
+  <view id="userImg">
+    <view class="user">
+      <view class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+  </view>
+  <view id="header">
+    <van-cell title="我的订单" icon="/images/complete.png" is-link url="/pages/user-order/user-order" />
+    <van-cell title="我的钱包" icon="/images/qian.png" is-link url="/pages/user-wallet/user-wallet" />
+  </view>
+  <view id="body">
+    <van-cell title="地址管理" icon="/images/address.png" is-link url="/pages/user-address/user-address" />
+    <van-cell title="消息通知" icon="/images/notice.png" is-link url="/pages/user-message/user-message" />
+    <van-cell title="客服反馈" icon="/images/kefu.png" is-link url="/pages/user-service/user-service" />
+  </view>
+  <view id="bottom">
+    <van-cell title="设置" icon="/images/settin.png" is-link url="/pages/user-setting/user-setting" />
+  </view>
+
+  <!-- 未授权弹框 -->
+  <van-popup show="{{ show }}" closeable position="bottom" custom-style="height: 25%" bind:close="onClose">
+    <view class="tankuang">
+      <view class="txt">登录湾大书享书</view>
+      <van-button round type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" color="#4C5BFF">一键授权</van-button>
+    </view>
+  </van-popup>
+</view>

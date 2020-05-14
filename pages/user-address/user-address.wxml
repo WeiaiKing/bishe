@@ -1,0 +1,14 @@
+<view id="container">
+  <block wx:for="{{address_list}}" wx:key='index' >
+    <view bindtap="go_address_editor" data-item="{{item}}">
+      <van-cell-group>
+        <van-cell title="{{item.province}}{{item.city}}{{item.district}}{{item.content}}" title-width="300px;" label="{{item.name}} {{item.phone}}" border="{{ false }}" icon="location-o" is-link />
+      </van-cell-group>
+    </view>
+  </block>
+  <navigator url="/pages/user-address-create/user-address-create">
+    <view class="bottom_address">
+      <van-button type="primary" color="#ff8780" round block>添加地址</van-button>
+    </view>
+  </navigator>
+</view>

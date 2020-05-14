@@ -1,0 +1,19 @@
+<view id="star" wx:if="{{confirm}}">
+    <view> 给「{{detail.name}}」评分</view>
+    <image src="{{detail.imgUrl}}"></image>
+    <view style="color:#ff8780;font-size:28rpx;">*根据书的内容来打分哦*</view>
+    <van-rate value="{{ star }}" bind:change="onChange" size="{{ 32 }}" color="#ff8780" style="margin:30rpx 0 ;" />
+    <textarea placeholder="一些阅读感受" placeholder-style="color:#999999;font-size:28rpx;" bindblur="get_contents" maxlength="1500" class="texta"></textarea>
+    <view style="font-size:24rpx;color:#999999;margin-top:20rpx;">*如果买到的书品相不符或疑似盗版，请联系客服处理。</view>
+    <view id="bottom-btn">
+        <van-button color="#ff8780" round disabled="{{disabled}}" bindtap="confirm">确定</van-button>
+    </view>
+
+</view>
+
+<view class="sign_up" wx:else>
+    <image src="/images/success.png" class="sign_up_img"></image>
+    <view>提交成功</view>
+    <view style="margin:26rpx 0 40rpx 0;">管理员审核通过后将在平台展示</view>
+    <!-- <van-button round type="info" bindtap="return_index" color="#EEEFF1" custom-style="color:#4c5bff;">返回首页</van-button> -->
+</view>

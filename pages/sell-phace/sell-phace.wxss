@@ -1,0 +1,67 @@
+page {
+  color: #222;
+  font-size: 28rpx;
+}
+
+#header {
+  padding: 30rpx 30rpx 0 30rpx;
+}
+
+#phace-good {
+  padding: 30rpx 30rpx 0 30rpx;
+  margin-bottom: 15rpx;
+}
+
+#phace-commonly {
+  padding: 0 30rpx;
+  margin: 30rpx 0 15rpx 0;
+}
+
+#phace-poor {
+  margin: 30rpx 0 15rpx 0;
+  padding: 0 30rpx;
+}
+
+#phace-other {
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+}
+
+.poor-img-flex-father {
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #969696;
+  font-size: 26rpx;
+}
+
+.poor-img-flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opselect {
+  color:#ff8780;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poor-text {
+  padding: 0 30rpx;
+  height: 1200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.good-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commonly-img{
+  padding: 0 30rpx;
+}
